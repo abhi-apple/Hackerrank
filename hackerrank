@@ -1,0 +1,47 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+class ram{
+    public:
+    void set(){
+        string str="";
+        cin>>str;
+    
+    
+        char arr[str.length()+1];
+        for (int x = 0; x < sizeof(arr); x++) { 
+        arr[x] = str[x]; 
+        //cout << arr[x]; 
+        }
+        for(int x=0;x<sizeof(arr);x+=2){
+            cout<<arr[x];
+        }
+        cout<<" ";
+        for(int x=1;x<sizeof(arr);x+=2){
+            cout<<arr[x];
+        }
+    
+    }
+    void space(){
+        cout<<endl;
+    }
+};
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */  
+    ram a;
+    int n;
+    cin>>n;
+    cout<<n;
+
+    for(int i=0;i<=n;i++){
+        a.set();
+    } 
+    for(int i=0;i<=n-1;i++){
+        a.space();
+    } 
+    return 0;
+}
